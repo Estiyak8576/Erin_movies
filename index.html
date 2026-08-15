@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Web Site</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./Assets/css/Style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar"> 
+            <div class="navbar_container">
+                <p class="nav_logo">Erin</p>
+                <a href="index.html">Home</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="v_gap">
+            <h1>Estiyak, Erin Movie web site</h1>
+        </div>
+    </main>
+
+    <!-- ভিডিও গ্রিড সেকশন -->
+    <section class="orginal_video">
+        
+        <!-- Google Drive Movie Links -->
+        <div class="video-card" data-title="96 (2018)" data-src="https://drive.google.com/file/d/1N1-LjIL2uEVQMn9o9daR16jy2i1fzyGX/preview">
+            <div class="drive-poster"><i class="fa-solid fa-film"></i></div>
+            <span class="video-title">96 (2018)</span>
+        </div>
+
+        <div class="video-card" data-title="Adore (2013)" data-src="https://drive.google.com/file/d/1KIqsdbeHbhyajsuGfVIQRTCnPGKLj_eq/preview">
+            <div class="drive-poster"><i class="fa-solid fa-film"></i></div>
+            <span class="video-title">Adore (2013)</span>
+        </div>
+
+        <!-- Local / Other Video -->
+        <div class="video-card" data-title="Girls on Film (2023)" data-src="https://drive.google.com/file/d/1zUAvdqI8x7qEDqBrwDpFJMmLHSajwYdZ/preview">
+            <div class="drive-poster"><i class="fa-solid fa-film"></i></div>
+            <span class="video-title">Girls on Film (2023)</span>
+        </div>
+
+        <div class="video-card" data-title="Saali Mohabbat (2025)" data-src="https://drive.google.com/file/d/1QVXpjy7km2TU_CTP5jcyYvOPnz7V7YI-/preview">
+            <div class="drive-poster"><i class="fa-solid fa-film"></i></div>
+            <span class="video-title">Saali Mohabbat (2025)</span>
+        </div>
+
+        <div class="video-card" data-title="Off campus Episode 1" data-src="https://drive.google.com/file/d/1iiUk7scVQryp2bftv_BJrCuy_I5WXX9Z/preview">
+            <div class="drive-poster"><i class="fa-solid fa-film"></i></div>
+            <span class="video-title">Off campus Episode 1</span>
+        </div>
+
+        <div class="video-card" data-title="Off campus Episode 2" data-src="https://drive.google.com/file/d/1WZrrJCUFSWejFVw9D7Sll77UgjE-HGmt/preview">
+            <div class="drive-poster"><i class="fa-solid fa-film"></i></div>
+            <span class="video-title">Off campus Episode 2</span>
+        </div>
+
+        <div class="video-card" data-title="Off campus Episode 3" data-src="https://drive.google.com/file/d/1h0-QnmoFCa01EiyTwgFcNlH_zw9DS_6e/preview">
+            <div class="drive-poster"><i class="fa-solid fa-film"></i></div>
+            <span class="video-title">Off campus Episode 3</span>
+        </div>
+        <div class="video-card" data-title="Off campus Episode 1" data-src="./Assets/video/Off campus Episode 1.mp4">
+            <video src="./Assets/video/Off campus Episode 1.mp4" muted loop preload="metadata"></video>
+            <span class="video-title">Off campus Episode 1</span>
+        </div>
+        
+    </section>
+
+    <!-- ভিডিও পপআপ প্লেয়ার (Modal Player) -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <div class="modal-controls">
+                <button class="ctrl-btn max-btn" id="maxBtn" title="Maximize / Fullscreen"><i class="fa-solid fa-expand"></i></button>
+                <button class="ctrl-btn minus-btn" id="minusBtn" title="Minimize"><i class="fa-solid fa-minus"></i></button>
+                <button class="ctrl-btn close-btn" id="closeBtn" title="Close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="player-container">
+                <div class="main-player-box">
+                    <div class="video-wrapper">
+                        <!-- JS দিয়ে ভিডিও ডায়নামিকালি লোড হবে -->
+                    </div>
+                    
+                    <div class="player-footer">
+                        <h2 id="modalVideoTitle">Movie Title</h2>
+                        <div class="skip-buttons" id="skipButtonsGroup">
+                            <button id="rewindBtn" class="skip-action-btn"><i class="fa-solid fa-backward-step"></i> -10s</button>
+                            <button id="forwardBtn" class="skip-action-btn">+10s <i class="fa-solid fa-forward-step"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="suggested-sidebar">
+                    <h3>Suggested Movies</h3>
+                    <div class="suggested-list" id="suggestedList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="./Assets/javascript/javascript.js"></script>
+</body>
+</html>
